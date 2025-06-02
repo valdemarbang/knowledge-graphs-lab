@@ -1,0 +1,111 @@
+@prefix lab: <http://sdm_lab.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+lab:Author a rdfs:Class .
+
+lab:City a rdfs:Class .
+
+lab:Conference a rdfs:Class .
+
+lab:Edition a rdfs:Class .
+
+lab:Journal a rdfs:Class .
+
+lab:JournalVolume a rdfs:Class .
+
+lab:Keywords a rdfs:Class .
+
+lab:Paper a rdfs:Class .
+
+lab:Person a rdfs:Class .
+
+lab:Proceedings a rdfs:Class .
+
+lab:Review a rdfs:Class .
+
+lab:Reviewer a rdfs:Class .
+
+lab:Venue a rdfs:Class .
+
+lab:Workshop a rdfs:Class .
+
+lab:cites a rdf:Property ;
+    rdfs:domain lab:Paper ;
+    rdfs:range lab:Paper .
+
+lab:hasAbstract a rdf:Property ;
+    rdfs:domain lab:Paper ;
+    rdfs:range xsd:string .
+
+lab:hasAuthor a rdf:Property ;
+    rdfs:domain lab:Paper ;
+    rdfs:range lab:Author .
+
+lab:hasEditionNumber a rdf:Property ;
+    rdfs:domain lab:Edition ;
+    rdfs:range xsd:int .
+
+lab:hasKeyword a rdf:Property ;
+    rdfs:domain lab:Paper ;
+    rdfs:range lab:Keywords .
+
+lab:hasProceedings a rdf:Property ;
+    rdfs:domain lab:Edition ;
+    rdfs:range lab:Proceedings .
+
+lab:hasReviewer a rdf:Property ;
+    rdfs:domain lab:Review ;
+    rdfs:range lab:Author .
+
+lab:hasVolumeNumber a rdf:Property ;
+    rdfs:domain lab:JournalVolume ;
+    rdfs:range xsd:int .
+
+lab:hasYear a rdf:Property ;
+    rdfs:domain lab:Edition ;
+    rdfs:range xsd:int .
+
+lab:heldInCity a rdf:Property ;
+    rdfs:domain lab:Edition ;
+    rdfs:range lab:City .
+
+lab:isA a rdf:Property ;
+    rdfs:domain lab:Author,
+        lab:Reviewer ;
+    rdfs:range lab:Person .
+
+lab:isHeldAtVenue a rdf:Property ;
+    rdfs:domain lab:Edition ;
+    rdfs:range lab:Venue .
+
+lab:isPublishedInConference a rdf:Property ;
+    rdfs:domain lab:Paper ;
+    rdfs:range lab:Conference .
+
+lab:isPublishedInWorkshop a rdf:Property ;
+    rdfs:domain lab:Paper ;
+    rdfs:range lab:Workshop .
+
+lab:isVenue a rdf:Property ;
+    rdfs:domain lab:Conference,
+        lab:Workshop ;
+    rdfs:range lab:Venue .
+
+lab:partOfJournal a rdf:Property ;
+    rdfs:domain lab:JournalVolume ;
+    rdfs:range lab:Journal .
+
+lab:publishedInEdition a rdf:Property ;
+    rdfs:domain lab:Paper ;
+    rdfs:range lab:Edition .
+
+lab:publishedInVolume a rdf:Property ;
+    rdfs:domain lab:Paper ;
+    rdfs:range lab:JournalVolume .
+
+lab:reviewOf a rdf:Property ;
+    rdfs:domain lab:Review ;
+    rdfs:range lab:Paper .
+

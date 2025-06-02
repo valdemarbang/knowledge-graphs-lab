@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://sdm_lab.org/isPublishedInWorkshop">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Paper"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Workshop"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/isPublishedInConference">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Paper"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Conference"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/cites">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Paper"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Paper"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/heldInCity">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Edition"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/City"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/partOfJournal">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/JournalVolume"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Journal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Venue">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/isA">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Reviewer"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Author"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/hasEditionNumber">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Edition"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/hasReviewer">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Review"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Author"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/publishedInEdition">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Paper"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Edition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Journal">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/hasProceedings">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Edition"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Proceedings"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/hasAuthor">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Paper"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Author"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/hasAbstract">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Paper"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/reviewOf">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Review"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Paper"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Paper">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/JournalVolume">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/hasKeyword">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Paper"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Keywords"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/isHeldAtVenue">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Edition"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Venue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/hasYear">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Edition"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Keywords">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/City">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Reviewer">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/isVenue">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Conference"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Workshop"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/Venue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Edition">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Author">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/hasVolumeNumber">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/JournalVolume"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Review">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Proceedings">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Workshop">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/publishedInVolume">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://sdm_lab.org/Paper"/>
+    <rdfs:range rdf:resource="http://sdm_lab.org/JournalVolume"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Conference">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sdm_lab.org/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+</rdf:RDF>
